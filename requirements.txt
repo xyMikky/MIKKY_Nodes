@@ -1,0 +1,55 @@
+# MIKKY Nodes Requirements
+# ComfyUI 会在首次加载时自动安装这些依赖
+
+# ==========================================
+# 核心依赖（多个节点使用）
+# ==========================================
+
+# 数组和数值计算（几乎所有节点使用）
+numpy>=1.24.0
+
+# 图像处理（14+ 节点使用）
+Pillow>=10.0.0
+
+# ==========================================
+# 视频处理依赖
+# ==========================================
+
+# OpenCV - 视频处理和图像处理
+# 用于节点：08_video_iterator, 07_mask_batcher, 10_mask_editor, 20_storyboard_extractor
+opencv-python>=4.8.0
+
+# ImageIO - 视频读写
+# 用于节点：08_video_iterator, 15_video_seg
+imageio>=2.31.1
+
+# ImageIO FFmpeg - 自动 FFmpeg 支持（视频合并节点）
+# 用于节点：23_video_merger, 15_video_seg
+imageio-ffmpeg>=0.4.9
+
+# FFmpeg Python 绑定（可选，用于高级视频操作）
+# 用于节点：23_video_merger
+ffmpeg-python>=0.2.0
+
+# ==========================================
+# 网络请求依赖
+# ==========================================
+
+# 异步 HTTP 请求
+# 用于节点：16_siliconflow_tagger（异步图像打标）
+aiohttp>=3.9.0
+
+# 嵌套事件循环支持
+# 用于节点：16_siliconflow_tagger（允许在 Jupyter/ComfyUI 中使用 asyncio）
+nest-asyncio>=1.5.0
+
+# ==========================================
+# 注意事项
+# ==========================================
+# 
+# PyTorch 相关库（torch, torchaudio）不需要在此列出，
+# 因为 ComfyUI 已经包含这些依赖。
+#
+# ComfyUI 内置模块（comfy, folder_paths, nodes）也不需要列出。
+#
+# 标准库（os, sys, math, re, json 等）是 Python 自带的，不需要安装。
