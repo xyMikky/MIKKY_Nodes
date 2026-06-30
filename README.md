@@ -25,7 +25,6 @@
 10. `12_extract_float.py` - 文本浮点数提取节点
 11. `14_mikky_image.py` - 条件图像输入节点（若加载图像，则输出该图像，若不加载，则输出空值）
 12. `15_video_seg.py` - 视频分段切片节点
-13. `16_siliconflow_tagger.py` - SiliconFlow异步图像打标节点（支持并发和速率限制）
 14. `17_split_options.py` - 音频分段切片节点
 15. `18_image_resize_duplicate.py` - 图像批量缩放复制节点
 16. `19_video_side_splitter.py` - 视频左右拆分节点
